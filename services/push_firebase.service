@@ -1,0 +1,13 @@
+[Unit]
+Description=Push data to Firebase
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=f2019376031
+ExecStart=/bin/bash $PWD/push-to-firebase.sh
+
+[Install]
+WantedBy=multi-user.target

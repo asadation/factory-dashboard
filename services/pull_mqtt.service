@@ -1,0 +1,13 @@
+[Unit]
+Description=Pull data from MQTT
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=f2019376031
+ExecStart=/bin/bash $PWD/pull-from-mqtt.sh
+
+[Install]
+WantedBy=multi-user.target
